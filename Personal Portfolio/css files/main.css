@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {box-sizing: border-box; margin: 0; padding: 0;} 
+
+:root {
+    /* icon colors */
+    --github: #24292E;
+    --linkedin: #0A66C2;
+    --stack: #F48024;
+    --twitter: #1DA1F2;
+    --whatsapp: #25D366;
+    --facebook: #1877F2;
+    --instagram: radial-gradient(circle at 30% 107%, #FDF497 0%, #FD5949 45%, #D6249F 60%, #285AEB 90%);
+    --discord: #5865F2;
+
+    /*Light Theme Variables(Default)*/
+    --light-bg-color: #f7f9fc;
+    --light-text-color: #1e293b;
+    --light-primary-color: #4f46e5;
+    --light-secondary-color: #93c5fd;
+    --light-bg-gradient: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+    --light-btn-gradient: linear-gradient(45deg, #6366f1, #818cf8);
+    --light-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Apply light theme variables by default */
+    --bg-color: var(--light-bg-color);
+    --text-color: var(--light-text-color);
+    --primary-color: var(--light-primary-color);
+    --secondary-color: var(--light-secondary-color);
+    --bg-gradient: var(--light-bg-gradient);
+    --btn-gradient: var(--light-btn-gradient);
+    --box-shadow: var(--light-box-shadow);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --dark-bg-color: #1e293b;
+      --dark-text-color: #f7f9fc;
+      --dark-primary-color: #a5b4fc;
+      --dark-secondary-color: #60a5fa;
+      --dark-bg-gradient: linear-gradient(135deg, #1f2937, #111827);
+      --dark-btn-gradient: linear-gradient(45deg, #6366f1, #818cf8);
+      --dark-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      /* Apply dark theme variables if the user prefers it */
+      --bg-color: var(--dark-bg-color);
+      --text-color: var(--dark-text-color);
+      --primary-color: var(--dark-primary-color);
+      --secondary-color: var(--dark-secondary-color);
+      --bg-gradient: var(--dark-bg-gradient);
+      --btn-gradient: var(--dark-btn-gradient);
+      --box-shadow: var(--dark-box-shadow);
+    }
+  }
+  
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', 'serif';
+}
+body {
+    background-color: var(--bg-color);
+}
+.navbar {
+    background-color: var(--bg-color);
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 30%;
+    padding: 0 5px 0 5px;
+    z-index: 1000;
+}
+
+
+#nav-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+#nav-left img {
+    height: 38px;
+    width: 38px;
+    border: 2px inset;
+    border-radius: 50%;
+}
+
+#nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+#nav-right li {
+    list-style: none;
+    margin: 0 0 0 40px;
+    font-size: 17px;
+}
+#nav-right li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+#nav-right li:last-child {
+    display: none;
+}
+
+#title {
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 720px) {
+    #nav-right :not(:last-child) {
+        display: none;
+    }
+    #nav-right li:last-child {
+        display: flex;
+        font-size: 30px;
+        align-items: center;
+
+    }
+}

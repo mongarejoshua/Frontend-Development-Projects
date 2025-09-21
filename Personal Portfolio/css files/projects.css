@@ -1,0 +1,21 @@
+.projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.project-tile {
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    border: 1px inset;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px var(--text-color);
+}
+.project-tile img {
+    width: 390px;
+    height: 390px;
+}
