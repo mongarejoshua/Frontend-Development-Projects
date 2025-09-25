@@ -7,7 +7,6 @@ const submitButton = document.getElementById('submit');
 const toggleLink = document.getElementById('toggleLink');
 
 // dashboard variables
-const logout = document.getElementById('logout') 
 
 
 // toggleLink.addEventListener('click', loginMode)
